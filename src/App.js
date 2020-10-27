@@ -1,23 +1,18 @@
 import logo from './logo.svg';
-import './App.css';
-
+import useStyles from './App.style';
+import NavBarComponent from './components/navBar/navBar.component';
+import CardContentComponent from './components/content/cardContent.component';
+import ContentComponent from './components/content/content.component';
+import FooterComponent from './components/footer/footer.component';
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.main}>
+      <NavBarComponent />
+      <ContentComponent />
+      <div className={classes.footerWrapper}>
+        <FooterComponent />
+      </div>
     </div>
   );
 }
